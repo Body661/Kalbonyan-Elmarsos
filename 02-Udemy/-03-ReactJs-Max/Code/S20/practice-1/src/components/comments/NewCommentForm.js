@@ -9,7 +9,6 @@ const NewCommentForm = (props) => {
   const commentTextRef = useRef();
   const { sendRequest, status, error } = useHttp(addComment)
   const params = useParams();
-  console.log(params.quoteId)
   const { onAddedComment } = props
 
   useEffect(() => {
