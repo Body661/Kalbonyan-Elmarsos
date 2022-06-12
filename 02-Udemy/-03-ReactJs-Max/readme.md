@@ -9,7 +9,7 @@
 - [Live Demo](https://body-foodorder.netlify.app/)
 - ### Quotes app
 - [Project-code](./Projects/Quotes-App)
-- [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/quotes)
+- [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/)
 - ### Meetups app
 - [Project-code](./Projects/Meetups-App)
 - [Live Demo](https://meetups-app-nextjs-ruby.vercel.app/)
