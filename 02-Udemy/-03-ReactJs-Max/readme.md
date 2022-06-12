@@ -1,12 +1,18 @@
 # React - The Complete Guide (incl Hooks, React Router, Redux)
 ## Projects
 
-### Expenses App
+### Expenses app
 - [Project-code](./Projects/Expenses-App)
 - [Live Demo](https://body-expensesapp.netlify.app/)
 ### Food order app
 - [Project-code](./Projects/Food-Order-app)
 - [Live Demo](https://body-foodorder.netlify.app/)
+- ### Quotes app
+- [Project-code](./Projects/Quotes-App)
+- [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/quotes)
+- ### Meetups app
+- [Project-code](./Projects/Meetups-App)
+- [Live Demo](https://meetups-app-nextjs-ruby.vercel.app/)
 
 ---
 ## Code
