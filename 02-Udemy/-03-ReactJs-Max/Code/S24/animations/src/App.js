@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Transition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import "./App.css";
 import Modal from "./components/Modal/Modal";
 import Backdrop from "./components/Backdrop/Backdrop";
@@ -20,7 +20,21 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <Modal closed={this.closeModal} show={this.state.modalIsOpen} />
+        <CSSTransition
+          in={this.state.modalIsOpen}
+          timeout={300}
+          mountOnEnter
+          unmountOnExit
+          onEnter={() => console.log('enter')}
+          onEntering={() => console.log('onEntering')}
+          onEntered={() => console.log('onEntered')}
+          onExit={() => console.log('onExit')}
+          onExiting={() => console.log('onExiting')}
+          onExited={() => console.log('onExited')}
+          classNames='fase-slide'
+        >
+            <Modal closed={this.closeModal} />
+        </CSSTransition>
         <Backdrop show={this.state.modalIsOpen} />
         <button className="Button" onClick={this.showModal}>Open Modal</button>
         <h3>Animating Lists</h3>

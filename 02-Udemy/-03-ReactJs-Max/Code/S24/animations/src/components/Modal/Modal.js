@@ -3,9 +3,14 @@ import React from 'react';
 import './Modal.css';
 
 const modal = (props) => {
-    const cssClasses = ['Modal', props.show ? 'Modal ModalOpen' : 'Modal ModalClose']
+    // const cssClasses = [
+    //     'Modal',
+    //     props.show === 'entering'
+    //         ? 'ModalOpen'
+    //         : props.show === 'exiting' ? 'ModalClose' : null
+    // ]
 
-    return (<div className={cssClasses.join(' ')}>
+    return (<div className='Modal'>
         <h1>A Modal</h1>
         <button className="Button" onClick={props.closed}>Dismiss</button>
     </div>)
