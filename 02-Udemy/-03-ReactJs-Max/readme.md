@@ -13,7 +13,9 @@
 - ### Meetups app
 - [Project-code](./Projects/Meetups-App)
 - [Live Demo](https://meetups-app-nextjs-ruby.vercel.app/)
-
+- ### Todo app
+- [Project-code](./Projects/Todo-app)
+- [Live Demo](https://precious-semolina-d15662.netlify.app/)
 ---
 ## Code
 [Code](Code)
