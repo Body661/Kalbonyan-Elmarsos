@@ -45,12 +45,12 @@
 
 <span id="MERN"></span>
 # MERN Stack
-![0%](https://progress-bar.dev/65/?title=Done)
+![0%](https://progress-bar.dev/70/?title=Done)
 <br />
 ## JavaScript
 - [x] ` Done` `29h 30m` - 13 - [The Modern JavaScript Bootcamp](./02-Udemy/-02-Js-Andrew)
 ## ReactJs
-- [ ]  `in progress` `48h` - 14 - [React - The Complete Guide (incl Hooks, React Router, Redux)](./02-Udemy/-03-ReactJs-Max)
+- [x]  `Done` `48h` - 14 - [React - The Complete Guide (incl Hooks, React Router, Redux)](./02-Udemy/-03-ReactJs-Max)
 ## NodeJs
 - [ ] `in progress` `35h` - 15 - [The Complete Node.js Developer Course (3rd Edition)](/02-Udemy/-04-Nodejs-Andrew)
 
