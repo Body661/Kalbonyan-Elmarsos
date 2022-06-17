@@ -23,4 +23,4 @@
 ---
 [Course-Link](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)<br>
 
-![Certificate](https://via.placeholder.com/468x300?text=Certificate+Here)
+[Certificate](https://www.udemy.com/certificate/UC-ccd9f79d-9cbb-4330-b225-2907ee15204e/)
