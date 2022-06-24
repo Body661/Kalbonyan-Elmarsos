@@ -8,6 +8,13 @@ const getNotes = () => {
 const addNote = (title, body) => {
     const notes = loadNotes()
     const duplicateNote = notes.find((note) => note.title === title)
+
+    //? console.log(duplicateNote)
+    //? console.log(notes)
+    //? console.log(title)
+
+    // debugger
+
     if (!duplicateNote) {
         notes.push({ title, body })
         saveNotes(notes)
