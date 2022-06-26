@@ -1,8 +1,16 @@
-const geocode = require('./geocode')
-const weather = require('./weather')
+const geocode = require('./utils/geocode')
+const weather = require('./utils/weather')
 
-geocode('amsterdam', (latitude, longitude) => {
-    weather(latitude, longitude, (body) => {
-        console.log(`its crrently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degrees out.`)
+geocode(process.argv[2], (error, { latitude, longitude, placeName } = {}) => {
+    if (error) {
+        return console.log(error)
+    }
+
+    weather(latitude, longitude, (error, body) => {
+        if (error) {
+            return console.log(error)
+        }
+        console.log(`${placeName} :`)
+        console.log(body)
     })
-}) 
+})
