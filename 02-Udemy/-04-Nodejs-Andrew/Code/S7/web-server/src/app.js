@@ -53,7 +53,8 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        erorrMsg: 'Page not found'
+        erorrMsg: 'Page not found',
+        name: 'Abdolrahman Saleh'
     })
 })
 
