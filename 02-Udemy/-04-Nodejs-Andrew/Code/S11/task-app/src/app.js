@@ -3,13 +3,13 @@ require('./db/mongoose')
 
 const User = require('./models/user')
 const Task = require('./models/tasks')
-const { default: mongoose } = require('mongoose')
 
 const app = express()
 const port = process.env.PORT || 3000
 
 app.use(express.json())
 
+//? Add New user
 app.post('/users', async (req, res) => {
     const newUser = new User({ name: req.body.name, email: req.body.email, password: req.body.password, age: req.body.age })
     try {
@@ -20,20 +20,23 @@ app.post('/users', async (req, res) => {
     }
 })
 
+//? Get All Users
 app.get('/users', async (req, res) => {
-    const users = await User.find({})
-
     try {
+        const users = await User.find({})
         res.status(200).send(users)
     } catch (err) {
         res.status(500).send(err)
     }
 })
 
+//?Get one user by id
 app.get('/users/:id', async (req, res) => {
     const _id = req.params.id
-    const user = await User.findById(_id)
     try {
+        const user = await User.findByI
+        d(_id)
+
         if (!user) {
             return res.status(404).send()
         }
@@ -44,33 +47,57 @@ app.get('/users/:id', async (req, res) => {
     }
 })
 
-app.post('/tasks', async (req, res) => {
-    const newTask = new Task({ title: req.body.title, completed: req.body.completed })
-    await newTask.save()
+//? Update user by id
+
+app.patch('/users/:id', async (req, res) => {
+    const updates = Object.keys(req.body)
+    const allowedUpdates = ['name', 'email', 'password', 'age']
+    const isValidUpdate = updates.every(update => allowedUpdates.includes(update))
+
+    if (!isValidUpdate) {
+        return res.status(400).send({ err: 'Invalid updates' })
+    }
 
     try {
+        const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+
+        if (!user) {
+            return res.status(404).send()
+        }
+
+        res.status(202).send(user)
+    } catch (err) {
+        res.status(400).send(err)
+    }
+})
+
+//? Add new Task
+app.post('/tasks', async (req, res) => {
+    const newTask = new Task({ title: req.body.title, completed: req.body.completed })
+
+    try {
+        await newTask.save()
         res.status(201).send(newTask)
     } catch (err) {
         res.status(400).send(err)
     }
 })
 
+//? Get all tasks
 app.get('/tasks', async (req, res) => {
-    const tasks = await Task.find({})
-
     try {
+        const tasks = await Task.find({})
         res.send(tasks)
     } catch (err) {
         res.status(500).send(err)
     }
 })
 
+//? Get One Task by id
 app.get('/tasks/:id', async (req, res) => {
     const _id = req.params.id
-
-    const task = await Task.findById(_id)
-
     try {
+        const task = await Task.findById(_id)
         if (!task) {
             return res.status(404).send()
         }
@@ -80,6 +107,8 @@ app.get('/tasks/:id', async (req, res) => {
         res.status(500).send(err)
     }
 })
+
+
 
 app.listen(port, () => {
     console.log('listening on port')
