@@ -117,7 +117,6 @@ router.delete('/users/me', auth, async (req, res) => {
 
 //? Add user profile picture
 const upload = multer({
-    dest: 'avatars',
     limits: {
         fileSize: 1000000
     },
@@ -130,8 +129,39 @@ const upload = multer({
         cb(undefined, true)
     }
 })
+
 router.post('/users/me/avatar', auth, upload.single('avatar'), async (req, res) => {
+    req.user.avatar = req.file.buffer
+    await req.user.save()
     res.send()
+}, (error, req, res, next) => {
+    res.status(400).send({ error: error.message })
+})
+
+router.delete('/users/me/avatar', auth, async (req, res) => {
+    try {
+        req.user.avatar = undefined
+        await req.user.save()
+        res.send(req.user)
+    } catch (err) {
+        res.status(500).send()
+    }
+})
+
+router.get('/users/:id/avatar', async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id)
+
+        if (!user || !user.avatar) {
+            throw new Error()
+        }
+
+        res.set('Content-Type', 'image/jpeg')
+        res.send(user.avatar)
+
+    } catch (err) {
+        res.status(404).send()
+    }
 })
 
 module.exports = router;
