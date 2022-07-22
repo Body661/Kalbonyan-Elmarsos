@@ -86,3 +86,7 @@ test('Should not delete account', async () => {
         .send()
         .expect(401)
 })
+
+test('Should upload avatar', async () => { 
+    
+})
