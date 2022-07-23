@@ -25,11 +25,21 @@ io.on('connection', (socket) => {
     // })
 
     socket.emit('message', 'Welcome!')
+    socket.broadcast.emit('message', 'a new user has joined')
 
     socket.on('sendMsg', (message) => {
         io.emit('message', message)
     })
+
+    socket.on('sendLocation', (location) => {
+        io.emit('message', `https://www.google.com/maps?q=${location.latitude},${location.longitude}`)
+    })
+
+    socket.on('disconnect', () => {
+        io.emit('message', 'user has disconnect')
+    })
 })
+
 
 server.listen(PORT, () => {
     console.log('listening on port ' + PORT);
