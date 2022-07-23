@@ -21,7 +21,6 @@ socket.on('message', (message) => {
 socket.on('locationMessage', (url) => {
     const html = Mustache.render(locationMessageTemplate, {
         url,
-        name: 'My location'
     })
     messages.insertAdjacentHTML('beforeend', html)
 })
