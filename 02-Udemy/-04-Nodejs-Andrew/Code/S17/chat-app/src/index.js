@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const socketio = require('socket.io');
+const Filter = require('bad-words');
 
 const app = express();
 const server = http.createServer(app)
@@ -27,12 +28,19 @@ io.on('connection', (socket) => {
     socket.emit('message', 'Welcome!')
     socket.broadcast.emit('message', 'a new user has joined')
 
-    socket.on('sendMsg', (message) => {
+    socket.on('sendMsg', (message, callback) => {
+        const filter = new Filter()
+        if (filter.isProfane(message)) {
+            return callback('Profanity is not allowed')
+        }
+
         io.emit('message', message)
+        callback()
     })
 
-    socket.on('sendLocation', (location) => {
+    socket.on('sendLocation', (location, callback) => {
         io.emit('message', `https://www.google.com/maps?q=${location.latitude},${location.longitude}`)
+        callback()
     })
 
     socket.on('disconnect', () => {

@@ -2,6 +2,7 @@ const socket = io()
 
 const msgForm = document.querySelector('.msg-form')
 const userMsg = document.querySelector('.msg')
+const msgSendBtn = document.querySelector('.msg-btn')
 
 // const incrementBtn = document.querySelector('.increment')
 
@@ -20,7 +21,15 @@ socket.on('message', (message) => {
 
 msgForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    socket.emit('sendMsg', userMsg.value)
+    socket.emit('sendMsg', userMsg.value, (error) => {
+
+        if (error) {
+            return console.log(error)
+        }
+
+        console.log('Message delivered successfully')
+    })
+    userMsg.value = ''
 })
 
 const locationBtn = document.querySelector('.location-btn')
@@ -33,6 +42,8 @@ locationBtn.addEventListener('click', () => {
         socket.emit('sendLocation', {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
+        }, () => {
+            console.log('Location shared')
         })
     })
 })
