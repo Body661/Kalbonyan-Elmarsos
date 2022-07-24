@@ -10,7 +10,7 @@
 - [Live Demo](https://body-weather-app.herokuapp.com/)
 ### Chat App
 - [Project-code](./Projects/Chat-App)
-- [Live Demo]()
+- [Live Demo](https://body-nodejs-chat-app.herokuapp.com/)
 
 ---
 ## Code
@@ -19,5 +19,5 @@
 ---
 [Course-Link](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)<br>
 
-![Certificate](https://via.placeholder.com/468x300?text=Certificate+Here)
+[Certificate](https://www.udemy.com/certificate/UC-dcd7730e-bc81-442b-9bed-b97afd9f1cfe/)
 
