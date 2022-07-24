@@ -11,6 +11,10 @@ const messages = document.querySelector('.messages')
 const messageTemplate = document.querySelector('.message-template').innerHTML
 const locationMessageTemplate = document.querySelector('.location-message-template').innerHTML
 
+// Options
+const { name, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+
+// Recive Message
 socket.on('message', (message) => {
     const html = Mustache.render(messageTemplate, {
         message: message.text,
@@ -19,6 +23,7 @@ socket.on('message', (message) => {
     messages.insertAdjacentHTML('beforeend', html)
 })
 
+// Recive Location Message
 socket.on('locationMessage', (location) => {
     const html = Mustache.render(locationMessageTemplate, {
         url: location.url,
@@ -27,6 +32,7 @@ socket.on('locationMessage', (location) => {
     messages.insertAdjacentHTML('beforeend', html)
 })
 
+// Send Message
 msgForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -49,7 +55,7 @@ msgForm.addEventListener('submit', (e) => {
     })
 })
 
-
+// Send Location Message
 locationBtn.addEventListener('click', () => {
     if (!navigator.geolocation) {
         return alert('Geolocation is not supported by your browser')
@@ -67,3 +73,5 @@ locationBtn.addEventListener('click', () => {
         })
     })
 })
+
+socket.emit('join', { name, room })

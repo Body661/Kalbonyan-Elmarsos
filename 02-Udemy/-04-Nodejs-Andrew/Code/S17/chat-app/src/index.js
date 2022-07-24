@@ -18,16 +18,13 @@ app.use(express.static(path.join(__dirname, '../public')))
 io.on('connection', (socket) => {
     console.log('new connection')
 
-    // socket.emit('countUpdate', count)
+    socket.on('join', ({ name, room }) => {
+        socket.join(room)
 
-    // socket.on('increment', () => {
-    //     count++
-    // socket.emit('countUpdate', count)
-    //     io.emit('countUpdate', count)
-    // })
+        socket.emit('message', generateMessage(`Welcome ${name}!`))
+        socket.broadcast.to(room).emit('message', generateMessage(`${name} has joined`))
+    })
 
-    socket.emit('message', generateMessage('Welcome!'))
-    socket.broadcast.emit('message', generateMessage('a new user has joined'))
 
     socket.on('sendMsg', (message, callback) => {
         const filter = new Filter()
@@ -35,7 +32,7 @@ io.on('connection', (socket) => {
             return callback('Profanity is not allowed')
         }
 
-        io.emit('message', generateMessage(message))
+        io.to('12345').emit('message', generateMessage(message))
         callback()
     })
 
