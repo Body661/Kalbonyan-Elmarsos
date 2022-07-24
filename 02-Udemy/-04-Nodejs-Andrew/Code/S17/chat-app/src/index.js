@@ -28,17 +28,20 @@ io.on('connection', (socket) => {
 
         socket.join(user.room)
 
-        socket.emit('message', generateMessage("Room BOT", `Welcome ${user.name}!`))
-        socket.broadcast.to(user.room).emit('message', generateMessage("Room BOT", `${user.name} has joined!`))
+        socket.emit('message', generateMessage("Admin", `Welcome ${user.name}!`))
+        socket.broadcast.to(user.room).emit('message', generateMessage("Admin", `${user.name} has joined!`))
+        io.to(user.room).emit('roomData', {
+            room: user.room,
+            users: getUsersInRoom(user.room)
+        })
         callback()
     })
 
 
     socket.on('sendMsg', (message, callback) => {
-
         const user = getUser(socket.id)
-
         const filter = new Filter()
+
         if (filter.isProfane(message)) {
             return callback('Profanity is not allowed')
         }
@@ -59,6 +62,10 @@ io.on('connection', (socket) => {
 
         if (user) {
             io.to(user.room).emit('message', generateMessage(`${user.name} has disconnected`))
+            io.to(user.room).emit('roomData', {
+                room: user.room,
+                users: getUsersInRoom(user.room)
+            })
         }
     })
 })

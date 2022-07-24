@@ -10,9 +10,28 @@ const messages = document.querySelector('.messages')
 // Templates
 const messageTemplate = document.querySelector('.message-template').innerHTML
 const locationMessageTemplate = document.querySelector('.location-message-template').innerHTML
+const chatSidebarTemplate = document.querySelector('.sidebar-template').innerHTML
 
 // Options
 const { name, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+
+const autoScroll = () => {
+    const newMessage = messages.lastElementChild
+
+    const newMessageStyles = getComputedStyle(newMessage)
+    const newMessageMargin = parseInt(newMessageStyles.marginBottom)
+    const newMessageHeight = newMessage.offsetHeight + newMessageMargin
+
+    const visibleHeight = messages.offsetHeight
+
+    const containerHeight = messages.scrollHeight
+
+    const scrollOffset = messages.scrollTop + visibleHeight
+
+    if (containerHeight - newMessageHeight <= scrollOffset + 1) {
+        messages.scrollTop = messages.scrollHeight
+    }
+}
 
 // Recive Message
 socket.on('message', (message) => {
@@ -22,6 +41,7 @@ socket.on('message', (message) => {
         time: moment(message.timeStamp).format('h:mm a')
     })
     messages.insertAdjacentHTML('beforeend', html)
+    autoScroll()
 })
 
 // Recive Location Message
@@ -32,6 +52,7 @@ socket.on('locationMessage', (location) => {
         time: moment(location.timeStamp).format('h:mm a')
     })
     messages.insertAdjacentHTML('beforeend', html)
+    autoScroll()
 })
 
 // Send Message
@@ -76,9 +97,19 @@ locationBtn.addEventListener('click', () => {
     })
 })
 
+// Join room
 socket.emit('join', { name, room }, (error) => {
     if (error) {
         alert(error)
         location.href = '/'
     }
+})
+
+// Rendering users
+socket.on('roomData', ({ room, users }) => {
+    const html = Mustache.render(chatSidebarTemplate, {
+        users,
+        room
+    })
+    document.querySelector(".chat__sidebar").innerHTML = html
 })
