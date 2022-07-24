@@ -4,7 +4,7 @@ const addUser = ({ id, name, room }) => {
     name = name.trim().toLowerCase()
     room = room.trim().toLowerCase()
 
-    if (!user || !room) {
+    if (!name || !room) {
         return {
             error: 'Username and room are required'
         }
@@ -16,7 +16,7 @@ const addUser = ({ id, name, room }) => {
     })
 
     // Validate username
-    if (!unique) {
+    if (unique) {
         return {
             error: 'Username is already in use'
         }
@@ -26,7 +26,7 @@ const addUser = ({ id, name, room }) => {
     const user = { id, name, room }
     users.push(user)
 
-    return user
+    return { user }
 }
 
 const removeUser = (id) => {
