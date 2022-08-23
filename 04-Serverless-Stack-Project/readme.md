@@ -5,14 +5,10 @@
 [code](Serverless-project)
 
 ## Demo
+
+https://d3ugb5zir54o3d.cloudfront.net/
+
 <br>
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-## Features
-
--
--
--
--
+[App Screenshot](https://github.com/Body661/Kalbonyan-Elmarsos/tree/main/04-Serverless-Stack-Project/Serverless-project/notes/imgs)
