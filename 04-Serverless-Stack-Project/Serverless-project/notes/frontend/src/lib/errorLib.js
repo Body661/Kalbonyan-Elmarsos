@@ -2,7 +2,7 @@ import * as Sentry from "@sentry/browser";
 import config from "../config";
 import { useAlert } from 'react-alert'
 
-const isLocal = process.env.NODE_ENV === "development";
+const isLocal = false;
 
 export function initSentry() {
     if (isLocal) {
