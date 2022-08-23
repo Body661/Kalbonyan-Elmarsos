@@ -7,6 +7,7 @@ import config from "../config";
 import "./Notes.css";
 import { useAlert } from 'react-alert'
 import { s3Upload } from "../lib/awsLib";
+import onError from "../lib/errorLib";
 
 export default function Notes() {
     const file = useRef(null);
@@ -35,7 +36,7 @@ export default function Notes() {
                 setContent(content);
                 setNote(note);
             } catch (e) {
-                alert.show(e.message)
+                onError(e)
             }
         }
 
@@ -87,7 +88,7 @@ export default function Notes() {
             nav("/");
             alert.show('Changes saved successfully')
         } catch (e) {
-            alert.show(e.message)
+            onError(e)
             setIsLoading(false);
         }
     }
@@ -114,7 +115,7 @@ export default function Notes() {
             nav("/");
             alert.show('Note deleted successfully')
         } catch (e) {
-            alert.show(e.message)
+            onError(e)
             setIsDeleting(false);
         }
     }

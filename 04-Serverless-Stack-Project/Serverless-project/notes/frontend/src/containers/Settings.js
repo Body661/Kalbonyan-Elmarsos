@@ -7,6 +7,7 @@ import BillingForm from "../components/BillingForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { useAlert } from 'react-alert'
 import "./Settings.css";
+import onError from "../lib/errorLib";
 
 export default function Settings() {
     const alert = useAlert()
@@ -22,7 +23,7 @@ export default function Settings() {
 
     async function handleFormSubmit(storage, { token, error }) {
         if (error) {
-            alert.show(error)
+            onError(error)
             return;
         }
 
@@ -37,7 +38,7 @@ export default function Settings() {
             alert.show("Your card has been charged successfully!");
             nav("/");
         } catch (e) {
-            alert.show(e.message)
+            onError(e)
             setIsLoading(false);
         }
     }

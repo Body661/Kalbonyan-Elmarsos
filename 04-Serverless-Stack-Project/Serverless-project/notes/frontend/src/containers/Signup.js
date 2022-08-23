@@ -8,6 +8,7 @@ import "./Signup.css";
 import Validator from "validator";
 import { Auth } from "aws-amplify";
 import { useAlert } from 'react-alert'
+import onError from "../lib/errorLib";
 
 
 export default function Signup() {
@@ -46,7 +47,7 @@ export default function Signup() {
             setIsLoading(false);
             setNewUser(newUser);
         } catch (e) {
-            alert.show(e.message)
+            onError(e)
             setIsLoading(false);
         }
     }

@@ -4,13 +4,12 @@ import { useNavigate } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import config from "../config";
 import "./NewNote.css";
-import { useAlert } from 'react-alert'
 import { API } from "aws-amplify";
 import { s3Upload } from "../lib/awsLib";
+import onError from "../lib/errorLib";
 
 export default function NewNote() {
     const file = useRef(null);
-    const alert = useAlert()
     const nav = useNavigate();
     const [content, setContent] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +26,7 @@ export default function NewNote() {
         event.preventDefault();
 
         if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
-            alert.show(`Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE / 1000000} MB.`)
+            onError(`Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE / 1000000} MB.`)
             return;
         }
 
@@ -39,7 +38,7 @@ export default function NewNote() {
             await createNote({ content, attachment });
             nav("/");
         } catch (e) {
-            alert.show(e.message);
+            onError(e);
             setIsLoading(false);
         }
     }

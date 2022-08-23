@@ -6,6 +6,7 @@ import { API } from "aws-amplify";
 import { LinkContainer } from "react-router-bootstrap";
 import { BsPencilSquare } from "react-icons/bs";
 import { useAlert } from 'react-alert'
+import onError from "../lib/errorLib";
 
 export default function Home() {
     const alert = useAlert()
@@ -23,7 +24,7 @@ export default function Home() {
                 const notes = await loadNotes();
                 setNotes(notes);
             } catch (e) {
-                alert.show(e.message)
+                onError(e);
             }
 
             setIsLoading(false);

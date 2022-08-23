@@ -11,7 +11,9 @@ import config from './config';
 import { render } from 'react-dom'
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
+import { initSentry } from "./lib/errorLib";
 
+initSentry();
 
 Amplify.configure({
   Auth: {

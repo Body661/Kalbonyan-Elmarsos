@@ -4,11 +4,10 @@ import LoaderButton from "../components/LoaderButton";
 import "./Login.css";
 import { Auth } from "aws-amplify";
 import { useAppContext } from "../lib/contextLib";
-import { useAlert } from 'react-alert'
 import { useFormFields } from "../lib/hooksLib";
+import onError from "../lib/errorLib";
 
 export default function Login() {
-    const alert = useAlert()
     const { userHasAuthenticated } = useAppContext();
     const [isLoading, setIsLoading] = useState(false);
     const [fields, handleFieldChange] = useFormFields({
@@ -29,7 +28,7 @@ export default function Login() {
             await Auth.signIn(fields.email, fields.password);
             userHasAuthenticated(true);
         } catch (e) {
-            alert.show(e.message)
+            onError(e)
             setIsLoading(false);
         }
     }

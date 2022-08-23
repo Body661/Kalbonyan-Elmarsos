@@ -7,10 +7,10 @@ import { LinkContainer } from "react-router-bootstrap";
 import { AppContext } from "./lib/contextLib";
 import { Auth } from "aws-amplify";
 import { useNavigate } from "react-router-dom";
-import { useAlert } from 'react-alert'
+import onError from "./lib/errorLib";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
-  const alert = useAlert()
   const nav = useNavigate();
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [isAuthenticating, setIsAuthenticating] = useState(true);
@@ -25,7 +25,7 @@ function App() {
       userHasAuthenticated(true);
     } catch (e) {
       if (e !== "No current user") {
-        alert.show(e.message)
+        onError(e)
       }
     }
 
@@ -71,9 +71,11 @@ function App() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-          <Routes />
-        </AppContext.Provider>
+        <ErrorBoundary>
+          <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+            <Routes />
+          </AppContext.Provider>
+        </ErrorBoundary>
       </div>
     )
   );
