@@ -8,6 +8,10 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Amplify } from 'aws-amplify';
 import config from './config';
 
+import { render } from 'react-dom'
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-basic'
+
 
 Amplify.configure({
   Auth: {
@@ -33,11 +37,23 @@ Amplify.configure({
   }
 });
 
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.TOP_RIGHT,
+  timeout: 5000,
+  offset: '30px',
+  // you can also just use 'scale'
+  transition: transitions.SCALE
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <AlertProvider template={AlertTemplate} {...options}>
+        <App />
+      </AlertProvider>
+
     </Router>
   </React.StrictMode>
 );
