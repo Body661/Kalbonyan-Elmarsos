@@ -1,6 +1,5 @@
 import * as Sentry from "@sentry/browser";
 import config from "../config";
-import { useAlert } from 'react-alert'
 
 const isLocal = false;
 
