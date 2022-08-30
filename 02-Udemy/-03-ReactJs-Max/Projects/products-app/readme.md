@@ -1,136 +1,70 @@
-# React - The Complete Guide (incl Hooks, React Router, Redux)
+# Getting Started with Create React App
 
-## Projects
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### expenses-app (S3-S6)
+## Available Scripts
 
-- [Section 3 Code](./Projects/Expenses-app/S03-project)
-- [Section 4 Code](./Projects/Expenses-app/S04-project/)
-- [Section 5 Code](./Projects/Expenses-app/S04-project/)
-- [Final-Project Code](./Projects/Expenses-app/Final-project/)
+In the project directory, you can run:
 
-  <br/>
+### `npm start`
 
-- [Section 3 Project Live Demo]()
-- [Section 4 Project Live Demo]()
-- [Section 5 Project Live Demo]()
-- [Final Project Live Live Demo]()
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### goals app (S6-S7)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- [Section 6 Code](./Projects/goals-app/S06-project/)
-- [Section 7 Code](./Projects/goals-app/S07-project/)
-- [Final-Project Code](./Projects/goals-app/Final-project/)
+### `npm test`
 
-<br/>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- [Section 6 Project Live Demo]()
-- [Section 7 Project Live Demo]()
-- [Final Project Live Live Demo]()
+### `npm run build`
 
-### Section 8 Project
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- [Project-code](./Projects/section-8)
-- [Live Demo]()
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Section 9 Project
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- [Project-code](./Projects/section-9)
-- [Live Demo]()
+### `npm run eject`
 
-### Login-app (S10)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- [Project-code](./Projects/Login-app-s10/)
-- [Live Demo]()
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Login-app (S11)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- [Project-code](./Projects/Login-app-S10)
-- [Live Demo]()
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Order-food App (S12/S17)
+## Learn More
 
-- [Section 12 Code](./Projects/order-food-app/S12-project/)
-- [Section 17 Code](./Projects/order-food-app/S17-project/)
-- [Final-Project Code](./Projects/order-food-app/Final-project/)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<br/>
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- [Section 12 Project Live Demo]()
-- [Section 17 Project Live Demo]()
-- [Final Project Live Live Demo]()
+### Code Splitting
 
-### movies app(S14)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-- [Project-code](./Projects/movies-app)
-- [Live Demo]()
+### Analyzing the Bundle Size
 
-### Timer-app(S15)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- [Project-code](./Projects/timer)
-- [Live Demo]()
+### Making a Progressive Web App
 
-### Tasks app with firebase(S15)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-- [Project-code](./Projects/task-app-firbase/)
-- [Live Demo]()
+### Advanced Configuration
 
-### Form-app(S16)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- [Project-code](./Projects/form-app)
-- [Live Demo]()
+### Deployment
 
-### Redux Counter(S18)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- [Project-code](./Projects/redux-counter)
-- [Live Demo]()
+### `npm run build` fails to minify
 
-### Redux Cart(S19)
-
-- [Project-code](./Projects/redux-cart)
-- [Live Demo]()
-
-### Quotes app(S20)
-
-- [Project-code](./Projects/quotes-app)
-- [Live Demo]()
-
-### Authentication-page(S22)
-
-- [Project-code](./Projects/Authentication-page)
-- [Live Demo]()
-
-### Meetsup app(S23)
-
-- [Project-code](./Projects/meetsup-app)
-- [Live Demo]()
-
-### Animation-app (S24)
-
-- [Project-code](./Projects/animation-app)
-- [Live Demo]()
-
-### Products-app(S25)
-
-- [Project-code](./Projects/Products-app)
-- [Live Demo]()
-### Meetsup app(S23)
-
-- [Project-code](./Projects/meetsup-app)
-- [Live Demo]()
-### Meetsup app(S23)
-
-- [Project-code](./Projects/meetsup-app)
-- [Live Demo]()
-
----
-
-## Code
-
-[code](Code)
-
----
-
-[Course-Link](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)<br>
-
-![Certificate](https://via.placeholder.com/468x300?text=Certificate+Here)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

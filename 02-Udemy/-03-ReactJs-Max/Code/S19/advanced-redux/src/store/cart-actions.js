@@ -5,7 +5,7 @@ import { uiActions } from "./uiSlice";
 export const getCartData = () => {
     return async (dispatch) => {
         const request = async () => {
-            const response = await fetch('https://advanced-redux-8b5b3-default-rtdb.firebaseio.com/cart.json')
+            const response = await fetch('https://redux-cart-a5db2-default-rtdb.firebaseio.com/cart.json')
 
             if (!response.ok) {
                 throw new Error("Something went wrong");
@@ -43,7 +43,7 @@ export const sendCartData = (cart) => {
 
         const sendReq = async () => {
             const response = await fetch(
-                "https://advanced-redux-8b5b3-default-rtdb.firebaseio.com/cart.json",
+                "https://redux-cart-a5db2-default-rtdb.firebaseio.com/cart.json",
                 {
                     method: "PUT",
                     body: JSON.stringify(cart),
