@@ -4,17 +4,17 @@
 
 ### expenses-app (S3-S6)
 
-- [Section 3 Code](./Projects/Expenses-app/S03-project)
-- [Section 4 Code](./Projects/Expenses-app/S04-project)
-- [Section 5 Code](./Projects/Expenses-app/S04-project)
-- [Final-Project Code](./Projects/Expenses-app/Final-project/)
+- [Section 3 Code](./Projects/Expenses-App/S03-project)
+- [Section 4 Code](./Projects/Expenses-App/S04-project)
+- [Section 5 Code](./Projects/Expenses-App/S04-project)
+- [Final-Project Code](./Projects/Expenses-App/Final-project/)
 
   <br/>
 
 - [Section 3 Project Live Demo](https://expenses-app-s3.netlify.app/)
 - [Section 4 Project Live Demo](https://expenses-app-s4.netlify.app/)
 - [Section 5 Project Live Demo](https://body-expensesapp.netlify.app/)
-- [Final Project Live Live Demo](https://body-form-app.netlify.app/)
+- [Final Project Live Live Demo](https://body-expensesapp.netlify.app/)
 
 ### goals app (S6-S7)
 
@@ -31,12 +31,12 @@
 ### Section 8 Project
 
 - [Project-code](./Projects/section-8)
-- [Live Demo]()
+- [Live Demo](https://sec-8-project.netlify.app/)
 
 ### Section 9 Project
 
 - [Project-code](./Projects/section-9)
-- [Live Demo]()
+- [Live Demo](https://section-9-project.netlify.app/)
 
 ### Login-app (S10)
 
@@ -63,12 +63,12 @@
 ### Timer-app(S15)
 
 - [Project-code](./Projects/timer)
-- [Live Demo]()
+- [Live Demo](https://body-timer.netlify.app/)
 
 ### Tasks app with firebase(S15)
 
-- [Project-code](./Projects/task-app-firbase/)
-- [Live Demo]()
+- [Project-code](./Projects/task-app-firebase/)
+- [Live Demo](https://body-task-app-firebase.netlify.app/)
 
 ### Form-app(S16)
 
@@ -78,12 +78,12 @@
 ### Redux Counter(S18)
 
 - [Project-code](./Projects/redux-counter)
-- [Live Demo]()
+- [Live Demo](https://body-redux-counter.netlify.app/)
 
 ### Redux Cart(S19)
 
 - [Project-code](./Projects/redux-cart)
-- [Live Demo]()
+- [Live Demo](https://body-redux-cart.netlify.app/)
 
 ### Quotes app(S20)
 
@@ -103,12 +103,12 @@
 ### Animation-app (S24)
 
 - [Project-code](./Projects/animation-app)
-- [Live Demo]()
+- [Live Demo](https://body-animaions-app.netlify.app/)
 
 ### Products-app(S25)
 
 - [Project-code](./Projects/Products-app)
-- [Live Demo]()
+- [Live Demo](https://body-products-app.netlify.app/)
 
 ## Code
 [Code](Code)
