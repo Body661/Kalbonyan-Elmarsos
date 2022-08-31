@@ -6,7 +6,7 @@
 
 - [Section 3 Code](./Projects/Expenses-App/S03-project)
 - [Section 4 Code](./Projects/Expenses-App/S04-project)
-- [Section 5 Code](./Projects/Expenses-App/S04-project)
+- [Section 5 Code](./Projects/Expenses-App/S05-project)
 - [Final-Project Code](./Projects/Expenses-App/Final-project/)
 
   <br/>
@@ -14,7 +14,7 @@
 - [Section 3 Project Live Demo](https://expenses-app-s3.netlify.app/)
 - [Section 4 Project Live Demo](https://expenses-app-s4.netlify.app/)
 - [Section 5 Project Live Demo](https://body-expensesapp.netlify.app/)
-- [Final Project Live Live Demo](https://body-expensesapp.netlify.app/)
+- [Final Project Live Demo](https://body-expensesapp.netlify.app/)
 
 ### goals app (S6-S7)
 
@@ -26,7 +26,7 @@
 
 - [Section 6 Project Live Demo](https://goals-app-s7.netlify.app/)
 - [Section 7 Project Live Demo](https://goals-app-s6.netlify.app/)
-- [Final Project Live Live Demo](https://goals-app-s6.netlify.app/)
+- [Final Project Live Demo](https://goals-app-s6.netlify.app/)
 
 ### Section 8 Project
 
@@ -87,7 +87,7 @@
 
 ### Quotes app(S20)
 
-- [Project-code](./Projects/Quotes-app)
+- [Project-code](./Projects/Quotes-App)
 - [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/)
 
 ### Authentication-page(S22)
@@ -107,7 +107,7 @@
 
 ### Products-app(S25)
 
-- [Project-code](./Projects/Products-app)
+- [Project-code](./Projects/products-app)
 - [Live Demo](https://body-products-app.netlify.app/)
 
 ## Code
