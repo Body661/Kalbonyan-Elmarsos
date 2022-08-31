@@ -55,6 +55,18 @@
 - [Section 17 Project Live Demo](https://body-foodorder.netlify.app/)
 - [Final Project Live Live Demo](https://body-foodorder.netlify.app/)
 
+
+### Users app(S12)
+
+- [Project-code](./Projects/S12-project)
+- [Live Demo](https://s12-app.netlify.app/)
+
+
+### Users app(S13)
+
+- [Project-code](./Projects/S13-project)
+- [Live Demo](https://s13-app.netlify.app/)
+
 ### movies app(S14)
 
 - [Project-code](./Projects/movies-app)
@@ -85,7 +97,7 @@
 - [Project-code](./Projects/redux-cart)
 - [Live Demo](https://body-redux-cart.netlify.app/)
 
-### Quotes app(S20)
+### Quotes app(S20 - S21)
 
 - [Project-code](./Projects/Quotes-App)
 - [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/)
