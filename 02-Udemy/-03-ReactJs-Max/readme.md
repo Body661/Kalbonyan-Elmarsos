@@ -43,9 +43,9 @@
 - [Project-code](./Projects/Login-app-s10/)
 - [Live Demo](https://body-Login-app-s10.netlify.app/)
 
-### Order-food App (S12/S17)
+### Order-food App (S11/S17)
 
-- [Section 12 Code](./Projects/order-food-app/S11-project/)
+- [Section 11 Code](./Projects/order-food-app/S11-project/)
 - [Section 17 Code](./Projects/order-food-app/S17-project/)
 - [Final-Project Code](./Projects/order-food-app/Final-project/)
 
