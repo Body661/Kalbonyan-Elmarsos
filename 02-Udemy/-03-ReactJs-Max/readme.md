@@ -141,12 +141,12 @@
 
 - [Project-1-code](./Projects/section-29/project-1)
 - [Project-2-code](./Projects/section-29/project-2)
-- 
-  <br/>
+
+<br/>
 
 - [Project 1 Live view](https://s29-pr1.netlify.app/)
 - [Project 2 Live view](https://s29-pr2.netlify.app/)
-- 
+
 ## Code
 [Code](Code)
 
