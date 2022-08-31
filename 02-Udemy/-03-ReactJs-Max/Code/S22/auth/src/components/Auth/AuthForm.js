@@ -24,9 +24,9 @@ const AuthForm = () => {
     isLoading(true)
     let url;
     if (isLogin) {
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDawYYqFVhZTlpdBR8HDgis1Eg2bzbHQc0'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAsAGsq8q711z0qDDBw9yhpydKa_9Q1d8g'
     } else {
-      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDawYYqFVhZTlpdBR8HDgis1Eg2bzbHQc0'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAsAGsq8q711z0qDDBw9yhpydKa_9Q1d8g'
     }
 
     fetch(url, {

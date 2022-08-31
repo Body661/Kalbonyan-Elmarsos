@@ -1,0 +1,13 @@
+.goal-holder {
+  display: flex;
+  align-items: center;
+  background: #8b005d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+}
+.goal-item {
+  color: white;
+  cursor: pointer;
+  flex: 1;
+}
