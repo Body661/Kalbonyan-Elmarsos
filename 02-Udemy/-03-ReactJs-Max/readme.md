@@ -2,7 +2,7 @@
 
 ## Projects
 
-### expenses-app (S3-S6)
+### expenses app (S3-S6)
 
 - [Section 3 Code](./Projects/Expenses-App/S03-project)
 - [Section 4 Code](./Projects/Expenses-App/S04-project)
@@ -38,12 +38,12 @@
 - [Project-code](./Projects/section-9)
 - [Live Demo](https://section-9-project.netlify.app/)
 
-### Login-app (S10)
+### Login app (S10)
 
 - [Project-code](./Projects/Login-app-s10/)
 - [Live Demo](https://body-Login-app-s10.netlify.app/)
 
-### Order-food App (S11/S17)
+### Order food App (S11/S17)
 
 - [Section 11 Code](./Projects/order-food-app/S11-project/)
 - [Section 17 Code](./Projects/order-food-app/S17-project/)
@@ -72,7 +72,7 @@
 - [Project-code](./Projects/movies-app)
 - [Live Demo](https://body-movies-app.netlify.app/)
 
-### Timer-app(S15)
+### Timer app(S15)
 
 - [Project-code](./Projects/timer)
 - [Live Demo](https://body-timer.netlify.app/)
@@ -102,7 +102,7 @@
 - [Project-code](./Projects/Quotes-App)
 - [Live Demo](https://elaborate-blini-c8cf9c.netlify.app/)
 
-### Authentication-page(S22)
+### Authentication page(S22)
 
 - [Project-code](./Projects/Authentication-page)
 - [Live Demo](https://body-auth-app.netlify.app/)
@@ -112,16 +112,41 @@
 - [Project-code](./Projects/meetsup-app)
 - [Live Demo](https://meetups-app-nextjs-ruby.vercel.app/)
 
-### Animation-app (S24)
+### Animation app (S24)
 
 - [Project-code](./Projects/animation-app)
 - [Live Demo](https://body-animaions-app.netlify.app/)
 
-### Products-app(S25)
+### Products app(S25)
 
 - [Project-code](./Projects/products-app)
 - [Live Demo](https://body-products-app.netlify.app/)
 
+### Testing react apps(S26)
+
+- [Project-code](./Projects/testing-S26)
+- [Live Demo](https://body-testing.netlify.app/)
+
+### Todo app ts(S27)
+
+- [Project-code](./Projects/todo-app-TS)
+- [Live Demo](https://body-todo-ts.netlify.app/)
+
+### Ingredients app(S28)
+
+- [Project-code](./Projects/ingredients-app)
+- [Live Demo](https://body-ingredients-app.netlify.app/)
+
+### Section 29 projects (S29)
+
+- [Project-1-code](./Projects/section-29/project-1)
+- [Project-2-code](./Projects/section-29/project-2)
+- 
+  <br/>
+
+- [Project 1 Live view](https://s29-pr1.netlify.app/)
+- [Project 2 Live view](https://s29-pr2.netlify.app/)
+- 
 ## Code
 [Code](Code)
 
