@@ -56,7 +56,7 @@
 - [Final Project Live Live Demo](https://body-foodorder.netlify.app/)
 
 
-### Users app(S12)
+### Behind the scenes(S12)
 
 - [Project-code](./Projects/S12-project)
 - [Live Demo](https://s12-app.netlify.app/)
